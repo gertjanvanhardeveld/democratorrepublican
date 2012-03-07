@@ -11,10 +11,15 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'democrat',                      # Or path to database file if using sqlite3.
-        'USER': 'gertjan',                      # Not used with sqlite3.
-        'PASSWORD': '59609196gj',                  # Not used with sqlite3.
+=======
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+>>>>>>> e14ae69c0245a0c22af7e2e705fd1ea9403a6570
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -83,7 +88,11 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
+<<<<<<< HEAD
 SECRET_KEY = 'mbn+vgscw^1-$06gc0(wux4@^j$j_5++jn$=m#17e2q2l=@@ny'
+=======
+SECRET_KEY = 'bgv)qjaphmgmz(4aumn7v+j8m7q58_-u$y6_$2)m+7xlc@0#q_'
+>>>>>>> e14ae69c0245a0c22af7e2e705fd1ea9403a6570
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -115,8 +124,13 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'django.contrib.admin',
     'party',
+=======
+    # Uncomment the next line to enable the admin:
+    # 'django.contrib.admin',
+>>>>>>> e14ae69c0245a0c22af7e2e705fd1ea9403a6570
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
