@@ -4,7 +4,7 @@ from democratorrepublican.party.models import Party
 
 def homepage(request):
     greeting = "What's your political preference?"
-    parties = Party.objects.all()
+    parties = Party.objects.order_by("state")[:5]
     return render_to_response('homepage.html', {
         'parties': parties,
         'greeting': greeting,
