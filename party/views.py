@@ -10,3 +10,11 @@ def homepage(request):
         'greeting': greeting,
     })
 
+
+
+
+def detail(request, party_id):
+    party = Party.objects.get(id=party_id)
+    return render_to_response('detail.html', {
+        'party': party,
+    })

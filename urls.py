@@ -4,7 +4,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'democratorrepublican.party.views.homepage', name='homepage'),
+    url(r'^$', 'democratorrepublican.party.views.homepage'),
+    url(r'^party/(?P<party_id>\d+)/$', 'democratorrepublican.party.views.detail'),
     #url(r'^democratorrepublican/', include('democratorrepublican.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

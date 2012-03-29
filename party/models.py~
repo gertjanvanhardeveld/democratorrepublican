@@ -4,6 +4,8 @@ from django.contrib.auth.models import User, UserManager
 class Party(models.Model):
     party = models.CharField(max_length=200)
     party_slug = models.SlugField()
+    def get_absolute_url(self):
+        return "/party/%i/" % self.id
     def __unicode__(self):
         return self.party
 
@@ -28,6 +30,9 @@ class CustomUser(User):
     zipcode = models.CharField(max_length=5)
     message = models.TextField()
     objects = UserManager()
+
+    def get_absolute_url(self):
+        return "/party/%i/" % self.id
 
     def __unicode__(self):
 
