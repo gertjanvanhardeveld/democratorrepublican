@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block main %}   
+
+    <h1> {{ greeting }} </h1>
+    <p> </p>
+
+<ul>{% for object in parties %}
+# <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+{% endfor %}</ul>
+
+{% endblock %}

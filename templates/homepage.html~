@@ -1,7 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
     <h1> {{ greeting }} </h1>
-    <p>Choose from the given options below and help us mapping the political landschape:</p>
+    <p>Choose from the given options below and help us mapping the political landscape:</p>
 
 <ul>{% for object in parties %}
 <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
 {% endfor %}</ul>
 
+
+{% endblock %}
