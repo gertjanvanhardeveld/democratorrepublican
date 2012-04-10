@@ -4,10 +4,13 @@
 
 
     <h1> {{ greeting }} </h1>
-    <p>Choose from the given options below and help us mapping the political landscape:</p>
+<br />
+    <p>Which party do you support?</p>
+
 
 <ul>{% for object in parties %}
-<li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+<li>{{ object }}? <a class="btn" href="{{ object.get_absolute_url }}">Click here! &raquo;</a></li>
+
 {% endfor %}</ul>
 
 
