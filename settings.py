@@ -69,7 +69,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    "/home/mwaite/democratorrepublican/static",
+    "/home/gert/project/democratorrepublican/static",
 )
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
@@ -105,7 +105,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'democratorrepublican.urls'
 
 TEMPLATE_DIRS = (
-    "/home/mwaite/democratorrepublican/templates"
+    "/home/gert/project/democratorrepublican/templates"
 )
 
 INSTALLED_APPS = (
