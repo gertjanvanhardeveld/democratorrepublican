@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+The Democratic Party
+
+<br>
+<br>
+
+Information on the Democratic Party
+
+</br>
+</br>
+
+{% endblock %}

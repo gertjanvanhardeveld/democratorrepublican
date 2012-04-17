@@ -6,6 +6,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'democratorrepublican.party.views.homepage'),
+    url(r'^about/$', 'democratorrepublican.party.views.about'),
+    url(r'^maps/$', 'democratorrepublican.party.views.maps'),
+    url(r'^democrats/$', 'democratorrepublican.party.views.democrats'),
     url(r'^party/(?P<party_id>\d+)/$', 'democratorrepublican.party.views.detail'),
     #url(r'^democratorrepublican/', include('democratorrepublican.foo.urls')),
 

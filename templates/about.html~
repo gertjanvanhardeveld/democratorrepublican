@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+About Political Preference
+
+<br>
+<br>
+
+COOL POLITICAL/SOCIETAL IMPORTANCE STORY
+
+</br>
+</br>
+
+{% endblock %}

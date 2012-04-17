@@ -16,8 +16,21 @@ def homepage(request):
         'greeting': greeting,
     })
 
+def about(request):
+    greeting = "Welcome on Political Preference"
+    return render_to_response('about.html', {
+        'greeting': greeting,
+    })
 
+def maps(request):
+    greeting = "Explore the world of Political Preferences"
+    return render_to_response('maps.html', {
+        'greeting': greeting,
+    })
 
+def democrats(request):
+    return render_to_response('democrats.html', {
+    })
 
 def detail(request, party_id):
     greeting = "Thanks for your support! Your political preference is:"
