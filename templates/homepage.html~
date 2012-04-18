@@ -4,14 +4,23 @@
 
 
     <h1> {{ greeting }} </h1>
-<br />
-    <p>Which party do you support?</p>
-
-
+{% if parties %}
 <ul>{% for object in parties %}
-<li>{{ object }}? <a class="btn" href="{{ object.get_absolute_url }}">Click here! &raquo;</a></li>
+<li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+</ul>{% endfor %}
+{% endif %}
 
-{% endfor %}</ul>
+{% if form %}
+<form method="post" action="/">
+{% csrf_token %}
+{{ form }}
 
+<input type="submit" value="Submit" />
+</form>
+{% endif %}
+{% if picked or form %}
+{% else %}
+<h3>Log in <a href="/accounts/login/">here</a> or <a href="/accounts/create/">create an account here</a>.
 
+{% endif %}
 {% endblock %}

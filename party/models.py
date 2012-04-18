@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User, UserManager
+from django.contrib.auth.models import User
+from django.forms import ModelForm
 
 class Party(models.Model):
     party = models.CharField(max_length=200)
@@ -21,16 +22,25 @@ class State(models.Model):
     def __unicode__(self):
         return self.state
 
-class CustomUser(User):
-    """User with app settings."""
+class CustomUser(models.Model):
+    user = models.ForeignKey(User)
     party = models.ForeignKey(Party)
     address = models.CharField(max_length=200)
     city = models.ForeignKey(City)
     state = models.ForeignKey(State)
     zipcode = models.CharField(max_length=5)
     message = models.TextField()
-    objects = UserManager()
 
     def __unicode__(self):
 
-        return self.user
+        return self.user.username
+
+class CustomUserForm(ModelForm):
+    class Meta:
+        #exclude = ('user',)
+        model = CustomUser
+
+
+
+
+

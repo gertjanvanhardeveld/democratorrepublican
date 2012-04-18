@@ -4,8 +4,9 @@
     <h1> {{ greeting }} </h1>
     <p>{{ party }} </p>
 
-<ul>{% for object in parties %}
-# <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+<h3>People who support {{ party }}</h3>
+<ul>{% for object in people %}
+<li>{{ object }}</li>
 {% endfor %}</ul>
 
 {% endblock %}

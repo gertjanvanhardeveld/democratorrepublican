@@ -17,6 +17,9 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    url(r'^accounts/create/$', 'democratorrepublican.party.views.create'),
 )
+
+
 
 urlpatterns += staticfiles_urlpatterns()
