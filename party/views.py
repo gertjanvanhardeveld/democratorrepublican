@@ -15,7 +15,7 @@ def homepage(request):
             picked = []
         if picked:
            parties = Party.objects.order_by('party')
-           greeting = "Welcome. See what's going on with the parties"
+           greeting = "Welcome. Pick a party please"
            form = []
         else:
             if request.method == 'POST': # If the form has been submitted...
@@ -54,6 +54,14 @@ def maps(request):
 
 def democrats(request):
     return render_to_response('democrats.html', {
+    })
+
+def republicans(request):
+    return render_to_response('republicans.html', {
+    })
+
+def otherparties(request):
+    return render_to_response('otherparties.html', {
     })
 
 def detail(request, party_id):

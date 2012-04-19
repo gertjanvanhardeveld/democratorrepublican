@@ -45,7 +45,7 @@
           <div class="nav-collapse">
             <ul class="nav">
 
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/maps">Maps</a></li> 
             </ul>
@@ -79,13 +79,13 @@
           <h2>Republicans</h2>
            <p>Information on the Republicans</p>
            <br />
-          <p><a class="btn" href="v">Click here! &raquo;</a></p>
+          <p><a class="btn" href="republicans">Click here! &raquo;</a></p>
        </div>
         <div class="span4">
 
           <h2>Other</h2>
           <p>Information on other parties as the Independents, Libertarians, the Constitution Party and others</p>
-          <p><a class="btn" href="#">Click here! &raquo;</a></p>
+          <p><a class="btn" href="otherparties">Click here! &raquo;</a></p>
         </div>
       </div>
 

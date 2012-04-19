@@ -9,6 +9,8 @@ urlpatterns = patterns('',
     url(r'^about/$', 'democratorrepublican.party.views.about'),
     url(r'^maps/$', 'democratorrepublican.party.views.maps'),
     url(r'^democrats/$', 'democratorrepublican.party.views.democrats'),
+    url(r'^republicans/$', 'democratorrepublican.party.views.republicans'),
+    url(r'^otherparties/$', 'democratorrepublican.party.views.otherparties'),
     url(r'^party/(?P<party_id>\d+)/$', 'democratorrepublican.party.views.detail'),
     #url(r'^democratorrepublican/', include('democratorrepublican.foo.urls')),
 
