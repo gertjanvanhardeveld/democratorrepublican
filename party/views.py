@@ -15,12 +15,12 @@ def homepage(request):
             picked = []
         if picked:
            parties = Party.objects.order_by('party')
-           greeting = "Welcome. Pick a party please"
+           greeting = "Welcome. Pick a party please!!!"
            form = []
         else:
             if request.method == 'POST': # If the form has been submitted...
                 parties =[]
-                greeting = "Welcome. Pick a party please"
+                greeting = "Welcome. Pick a party please!!"
                 form = CustomUserForm(request.POST) # A form bound to the POST data
                 if form.is_valid(): # All validation rules pass
                     #form.user = request.user.id
@@ -28,12 +28,18 @@ def homepage(request):
                     return HttpResponseRedirect('/maps/') # Redirect after POST
             else:
                 parties = []
-                greeting = "Welcome. Pick a party please"
+                greeting = "Welcome. Pick a party please!"
                 form = CustomUserForm() # An unbound form
     else:
         greeting = "You are not logged in. Log in to share your Political Preference." 
         form = []
-        parties = []  
+        parties = []
+	return render_to_response('homepage2.html', {
+	        'form': form,
+	        'greeting': greeting,
+	        'parties': parties,
+	    }, context_instance=RequestContext(request))
+  
     return render_to_response('homepage.html', {
         'form': form,
         'greeting': greeting,

@@ -3,7 +3,7 @@
 {% block main %}
 
 
-    <h1> {{ greeting }} </h1>
+    <b><h2> {{ greeting }} </h2></b>
 {% if parties %}
 <ul>{% for object in parties %}
 <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
@@ -21,10 +21,6 @@
 {% if form %}
 {% else %}
 <h3>Log in <a href="/accounts/login/">here</a> or <a href="/accounts/create/">create an account here</a>.
-{% endif %}
-
-{% if logged in %}
-<h3>You are logged in</h3>
 
 {% endif %}
 {% endblock %}
