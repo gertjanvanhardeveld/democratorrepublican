@@ -7,8 +7,12 @@
 
 <br>
 
-<b>Political Preference</b> gives you the possibility to show your political engagement to the world. Besides this, you can also explore political preferences all over the world and even see what your friends, your colleagues and even your mother vote.
+<b>Political Preference</b> gives you the possibility to share and show your political engagement. <br></br>
+Besides this, you can also explore political preferences all over the world. Herewith, you can see what the political views of your friends, your colleagues and even your mother are.
 
 </br>
+<br></br>
+<img src="/static/vote.jpg" width="200" align="right"/>
+<br></br>
 
 {% endblock %}

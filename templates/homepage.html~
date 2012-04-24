@@ -4,11 +4,13 @@
 
 
     <b><h2> {{ greeting }} </h2></b>
+<br>
 {% if parties %}
 <ul>{% for object in parties %}
 <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
-</ul>{% endfor %}
+{% endfor %}</ul>
 {% endif %}
+</br>
 
 {% if form %}
 <form method="post" action="/">
@@ -20,7 +22,6 @@
 {% endif %}
 {% if form %}
 {% else %}
-<h3>Log in <a href="/accounts/login/">here</a> or <a href="/accounts/create/">create an account here</a>.
-
+<!-- <h3>Log in <a href="/accounts/login/">here</a> or <a href="/accounts/create/">create an account here</a>. -->
 {% endif %}
 {% endblock %}

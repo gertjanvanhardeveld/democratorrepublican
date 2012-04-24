@@ -15,12 +15,12 @@ def homepage(request):
             picked = []
         if picked:
            parties = Party.objects.order_by('party')
-           greeting = "Welcome. Pick a party please!!!"
+           greeting = "Welcome. Pick a party please:"
            form = []
         else:
             if request.method == 'POST': # If the form has been submitted...
                 parties =[]
-                greeting = "Welcome. Pick a party please!!"
+                greeting = "Welcome. Pick a party please:"
                 form = CustomUserForm(request.POST) # A form bound to the POST data
                 if form.is_valid(): # All validation rules pass
                     #form.user = request.user.id
