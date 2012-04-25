@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<h3><b> Politcal Preference for your phone </b></h3>
+<br>
+</br>
+<h4>Click on the phone for the app!</h4>
+
+
+<img src="/static/iPhone.png" width= "200"/> 
+
+
+{% endblock %}

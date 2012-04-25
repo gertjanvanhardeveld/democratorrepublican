@@ -58,6 +58,10 @@ def maps(request):
         'greeting': greeting,
     })
 
+def mobile(request):
+    return render_to_response('mobile.html', {
+    })
+
 def democrats(request):
     return render_to_response('democrats.html', {
     })
